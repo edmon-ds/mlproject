@@ -1,7 +1,7 @@
 import logging
 import os
 from datetime import datetime
-from exception import CustomException
+import src.exception
 import sys
 
 #para mostrar la fecha en mes dia año hora minutos segundos
