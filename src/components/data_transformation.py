@@ -96,8 +96,7 @@ class DataTransformation:
             input_feature_test_arr =  preprocessing_obj.transform(input_feature_test_df)
 
 
-            print(input_feature_train_arr)
-
+            
             train_arr = np.c_[input_feature_train_arr , np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_arr , np.array(target_feature_test_df) ]
         
@@ -112,16 +111,4 @@ class DataTransformation:
             return ( train_arr, test_arr , self.data_transformation_config.preprocessor_obj_file_path )
 
         except Exception as e:
-            raise CustomException(e , sys)
-            
-
-from data_ingestion import *
-if __name__ =="__main__":
-    
-    obj = DataIngestion()
-    train_data , test_data = obj.initiate_data_ingestion()
-    data_transformation = DataTransformation()
-    
-    train_arr , test_arr , _ = data_transformation.initiate_data_transformation(train_data , test_data)
-    
-    print("todo funciona bien")
+            raise CustomException(e , sys)            
