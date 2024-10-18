@@ -14,7 +14,7 @@ if __name__ =="__main__":
     print("transformando datasets")
     print()
     data_transformation = DataTransformation()
-    train_arr , test_arr , _ = data_transformation.initiate_data_transformation(train_data_path , test_data_path )
+    train_arr , test_arr  = data_transformation.initiate_data_transformation(train_data_path , test_data_path )
     
     print("entrenando varios modelos")
     print()
@@ -26,7 +26,5 @@ if __name__ =="__main__":
     print("nombre y puntuacion del mejor modelo")
     print(f"nombre: {modeltrainer.best_model_name} puntuacion : {modeltrainer.best_model_score}")
    
-   
-    
     print("proceso finalizado")
     print()

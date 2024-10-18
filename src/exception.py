@@ -1,5 +1,4 @@
 #cuando ocurre un error muestra el mensaje donde ocurrio, la linea donde ocurrio y el tipo de excepcion
-
 import sys
 from src.logger import logging
 
