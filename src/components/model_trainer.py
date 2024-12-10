@@ -25,8 +25,7 @@ class ModelTrainer:
         
         self.models = {
                         "Decision Tree": DecisionTreeRegressor(),
-                        "Elastic Net": ElasticNet(),  # Reemplaza LinearRegression con ElasticNet
-                        "XGBRegressor": XGBRegressor(),        
+                        "Elastic Net": ElasticNet()  # Reemplaza LinearRegression con ElasticNet
                      }
 
         self.params = {
@@ -54,7 +53,6 @@ class ModelTrainer:
                                                     test_array[: , :-1] , 
                                                     test_array[: , -1]
                                                     )
-            
 
             # Adaptar la lista de modelos solo para los que están en params
 

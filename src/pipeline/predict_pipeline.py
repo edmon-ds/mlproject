@@ -2,20 +2,22 @@ import sys
 import pandas as pd
 from src.exception import CustomException
 from src.utils import load_object
-import dataclasses
-
 
 class MLutils:
-    model = load_object("artifacts\model.pkl")
-    preprocessor = load_object("artifacts\preprocessor.pkl")
+    #es importante colocar como separador "/" y no colocar "\" 
+    #el modelo no se podra cargar el linux
+    
+    model = load_object("artifacts/model.pkl")
+    preprocessor = load_object("artifacts/preprocessor.pkl")
 
 
 class CustomData:
-    def __init__(  self,gender: str,race_ethnicity: str,parental_level_of_education,
-                 lunch: str,
-                 test_preparation_course: str,
-        reading_score: int,
-        writing_score: int):
+    def __init__(  self,gender: str,race_ethnicity: str,
+                   parental_level_of_education,
+                   lunch: str,
+                   test_preparation_course: str,
+                   reading_score: int,
+                   writing_score: int):
 
         self.gender = gender
         self.race_ethnicity = race_ethnicity
